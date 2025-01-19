@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="/images/mail.ico">
     <link href="./output.css" rel="stylesheet">
     <script defer src="java.js"></script>
 </head>
@@ -13,48 +14,43 @@
         <h1 class="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 sm:mb-6">Confirmation</h1>
         
         <!-- Second Card -->
-        <div id="confirmationCard" class="bg-[#DDD8CB] flex flex-col rotate-2 rounded-lg p-4 sm:p-6 lg:p-8 shadow-lg w-full h-auto max-h-[80vh] overflow-auto">
+        <div id="card" class="bg-[#DDD8CB] flex flex-col rotate-2 rounded-lg p-4 sm:p-6 lg:p-8 shadow-lg w-full h-auto max-h-[80vh] overflow-auto">
             <div class="letter">
                 <form name="createLetter" id="createLetter" method="post" onsubmit="return validateForm()">
                     <!-- To Input -->
                     <label for="form-name" class="block mb-2 font-medium text-sm sm:text-base">To</label>
-                    <input type="text" id="form-name" name="toName" placeholder="To Name" 
-                        class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base">
+                    <input type="text" id="form-name" name="toName" placeholder="To Name" class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base">
                     
                     <!-- Message Textarea -->
                     <label for="message" class="block mb-2 font-medium text-sm sm:text-base">Message</label>
-                    <textarea id="form-message" name="message" rows="4" placeholder="Your message here..." 
-                        class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base resize-none"></textarea>
+                    <textarea id="form-message" name="message" rows="4" placeholder="Your message here..." class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base resize-none"></textarea>
                     
                     <!-- Background Options -->
                     <label class="block mb-4 font-medium text-sm sm:text-base">Choose a background design:</label>
                     <div class="flex flex-wrap gap-4 mb-4">
-                        <button type="button" id="noneButton" 
-                            class="px-4 py-2 rounded-lg bg-[#494040] text-[#ddd8cb] border border-[#ddd8cb] hover:bg-gray-700 text-sm sm:text-base">
+                        <button type="button" id="noneButton" class="px-4 py-2 rounded-lg bg-[#494040] text-[#ddd8cb] border border-[#ddd8cb] hover:bg-gray-700 text-sm sm:text-base">
                             None
                         </button>
-                        <button type="button" id="heartsButton" 
-                            class="px-4 py-2 rounded-lg bg-cover bg-[url('../images/Hearts.png')] hover:scale-105 transition text-sm sm:text-base">
+                        <button type="button" id="heartsButton" class="px-4 py-2 rounded-lg bg-cover bg-[url('../images/Hearts.png')] hover:scale-105 transition text-sm sm:text-base">
                             Hearts
                         </button>
-                        <button type="button" id="teddyButton" 
-                            class="px-4 py-2 rounded-lg bg-cover bg-[url('../images/bears.jpeg')] hover:scale-105 transition text-sm sm:text-base">
+                        <button type="button" id="teddyButton" class="px-4 py-2 rounded-lg bg-cover bg-[url('../images/bears.jpeg')] hover:scale-105 transition text-sm sm:text-base">
                             Teddy Bear
                         </button>
-                        <button type="button" id="gradiantButton" 
-                            class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#C06C84] via-[#6C5B7B] to-[#355C7D] text-white hover:scale-105 transition text-sm sm:text-base">
+                        <button type="button" id="valentinesButton" class="px-4 py-2 rounded-lg bg-cover bg-[url('../images/Valentines.png')] hover:scale-105 transition text-sm sm:text-base">
+                            Valentines
+                        </button>
+                        <button type="button" id="gradiantButton" class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#C06C84] via-[#6C5B7B] to-[#355C7D] text-white hover:scale-105 transition text-sm sm:text-base">
                             Gradient
                         </button>
                     </div>
                     
                     <!-- From Input -->
                     <label for="fromName" class="block mb-2 font-medium text-sm sm:text-base">From</label>
-                    <input type="text" id="fromName" name="fromName" placeholder="From Name" 
-                        class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base">
+                    <input type="text" id="fromName" name="fromName" placeholder="From Name" class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base">
                     
                     <!-- Submit Button -->
-                    <button type="submit" 
-                        class="px-6 py-2 rounded-lg bg-[#494040] text-[#ddd8cb] border border-[#ddd8cb] hover:bg-gray-700 text-sm sm:text-base transition">
+                    <button type="submit" class="px-6 py-2 rounded-lg bg-[#494040] text-[#ddd8cb] border border-[#ddd8cb] hover:bg-gray-700 text-sm sm:text-base transition" id="buttonSend">
                         Submit
                     </button>
                 </form>
