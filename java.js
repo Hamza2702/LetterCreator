@@ -27,6 +27,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 confirmationCard.style.backgroundImage = 'url("images/Valentines.png")';
                 confirmationCard.style.backgroundSize = 'cover';
                 confirmationCard.style.color = 'rgb(27,27,27)';
+                confirmationCard.style.fontWeight = 'bold';
+                confirmationCard.style.fontSize = '16px';
+                break;
+            case 'PurpleHearts':
+                confirmationCard.style.backgroundImage = 'url("images/PurpleHeart.png")';
+                confirmationCard.style.backgroundSize = 'cover';
+                confirmationCard.style.color = 'rgb(27,27,27)';
+                confirmationCard.style.fontWeight = 'bold';
+                confirmationCard.style.fontSize = '16px';
                 break;
             case 'Gradient':
                 confirmationCard.style.background = '-webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D)';
@@ -82,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const teddyButton = document.getElementById('teddyButton');
     const gradiantButton = document.getElementById('gradiantButton');
     const valentinesButton = document.getElementById('valentinesButton');
+    const purpleHeartsButton = document.getElementById('purpleHeartsButton');
     const card = document.getElementById('card');
 
     noneButton.addEventListener('click', function () {
@@ -119,5 +129,12 @@ document.addEventListener('DOMContentLoaded', function () {
         card.style.backgroundSize = 'cover';
         card.style.color = 'rgb(27,27,27)';
         localStorage.setItem('selectOption', 'Valentines')
-    })
+    });
+
+    purpleHeartsButton.addEventListener('click', function (){
+        card.style.backgroundImage = 'url("images/PurpleHeart.png")';
+        card.style.backgroundSize = 'cover';
+        card.style.color = 'rgb(27,27,27)';
+        localStorage.setItem('selectOption', 'PurpleHearts')
+    });
 });
