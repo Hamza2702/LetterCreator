@@ -19,7 +19,7 @@
                 <form name="createLetter" id="createLetter" method="post" onsubmit="return validateForm()">
                     <!-- To Input -->
                     <label for="form-name" class="block mb-2 font-medium text-sm sm:text-base">To</label>
-                    <input type="text" id="form-name" name="toName" placeholder="Name" class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base">
+                    <input type="text" id="form-name" name="toName" placeholder="Name" class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base" minlength="3" maxlength="80">
                     
                     <!-- Message Textarea -->
                     <label for="message" class="block mb-2 font-medium text-sm sm:text-base">Message</label>
@@ -50,7 +50,7 @@
                     
                     <!-- From Input -->
                     <label for="fromName" class="block mb-2 font-medium text-sm sm:text-base">From</label>
-                    <input type="text" id="fromName" name="fromName" placeholder="From Name" class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base">
+                    <input type="text" id="fromName" name="fromName" placeholder="From Name" class="w-full p-2 mb-4 border border-gray-300 rounded-lg text-sm sm:text-base" minlength="3" maxlength="80">
                     
                     <!-- Submit Button -->
                     <button type="submit" class="px-6 py-2 rounded-lg bg-[#FFFFFF] text-[#ddd8cb] border border-[#ddd8cb] hover:bg-gray-700 text-sm sm:text-base transition" id="buttonSend">
